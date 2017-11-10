@@ -1,0 +1,12 @@
+{
+    "name": "etudiant/cv-cgiuliani",
+    "authors": [
+        {
+            "name": "Cyril Giuliani",
+            "email": "giuliani.cyril@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.0"
+    }
+}
