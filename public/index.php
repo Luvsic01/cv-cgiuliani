@@ -1,8 +1,10 @@
 <?php
+require_once '../inc/config.php';
 
 // Variables du formulaire
 $infoForm = '';
 $formOk = true;
+$returnEmail = false;
 
 // Formulaire contact submit
 if (!empty($_POST)){
@@ -41,8 +43,17 @@ if (!empty($_POST)){
         $infoForm .= "Veuillez renseigner message<br>";
         $formOk = false;
     }
-    
-}
+
+    // Si les données de contact sont correct envoie par mail
+    if ($formOk){
+        $returnEmail = sendEmailContact($email, $name, $subject, $msg, $msg);
+        if ($returnEmail){
+            $infoForm = "Votre message à été correctement envoyé";
+        }else{
+            $infoForm = "Votre message n'a pas pu être envoyé veuillez réessayer plus tard";
+        }
+    }
+}// Fin du traintement post du formulaire de contact
 
 // Title page
 $title = "CV Cyril Giuliani";

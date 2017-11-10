@@ -1,5 +1,8 @@
 <section id="contact">
     <h2>Contact</h2>
+    <div id="infoForm" class="<?php if ($returnEmail): ?>valide<?php else: ?>invalide<?php endif; ?>">
+        <p><?= $infoForm ?></p>
+    </div>
     <form method="post" action="">
         <label for="name">Nom :</label>
         <input id="name" name="name" type="text" placeholder="* Votre nom" value="<?= $name ?? '' ?>">
