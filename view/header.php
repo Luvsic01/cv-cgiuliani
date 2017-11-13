@@ -9,18 +9,17 @@
     <title><?= $title ?></title>
 </head>
 <body>
-
+<nav>
+    <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#about">Présentation</a></li>
+        <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 <header>
-    <nav>
-        <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#about">Présentation</a></li>
-            <li><a href="#parcours">Parcours</a></li>
-            <li><a href="#skills">Compétences</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
     <h1>Cyril Giuliani - Développeur Full-Stack</h1>
 </header>
 <main>
