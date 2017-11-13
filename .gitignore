@@ -79,3 +79,5 @@ typings/
 inc/config\.php
 
 public/css/styles\.css\.map
+
+*.map
