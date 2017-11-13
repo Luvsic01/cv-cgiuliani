@@ -20,6 +20,6 @@
     </ul>
 </nav>
 <header>
-    <h1>Cyril Giuliani - Développeur Full-Stack</h1>
+    <h1>Cyril Giuliani<br><span>Développeur Full-Stack</span></h1>
 </header>
 <main>
