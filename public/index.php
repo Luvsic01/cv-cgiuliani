@@ -55,6 +55,8 @@ if (!empty($_POST)){
     }
 }// Fin du traintement post du formulaire de contact
 
+$arrayMiniPortfolio = getProjects(3);
+
 // Title page
 $title = "CV Cyril Giuliani";
 // include view
