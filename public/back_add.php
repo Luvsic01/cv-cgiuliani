@@ -8,11 +8,19 @@ if (!isset($_SESSION['email'])){
 // Initialisation des variables de validation
 $infoForm = '';
 $saisieOk = false;
-$fileOk = false;
-echo '<br><br><br><br><br><br>';
+$fileOk = true;
 
-// Si le formulaire a été soumis on valide les données saisie
-if (!empty($_POST)){
+if (!empty($_GET['id'])){
+    $projectSelect = getProjectById($_GET['id']);
+    //var_dump($projectSelect);
+    $nameProject = $projectSelect['pro_name'] ?? '';
+    $urlProject = $projectSelect['pro_url'] ?? '';
+    $description = $projectSelect['pro_description'] ?? '';
+    $dateStart = $projectSelect['pro_date_start'] ?? '';
+    $dateEnd = $projectSelect['pro_date_end'] ?? '';
+}
+
+if (!empty($_POST)){ // Si le formulaire a été soumis on valide les données saisie
     $saisieOk = true;
     // On récupère les données soumis
     $nameProject = $_POST['nameProject'] ?? '';
@@ -41,35 +49,64 @@ if (!empty($_POST)){
         $saisieOk = false;
     }
 }// fin de vérification des saisie
-var_dump($_FILES);
-// Je regarde si un fichier a été envoyé et je le valide
-if (!empty($_FILES)) {
-    $fileOk = true;
-    // On récupere les fichiers fournie
-    $imgGalery = $_FILES['imgGalery'] ?? array();
-    $imgGlobal = $_FILES['imgGlobal'] ?? array();
 
-    // Validation avec MIME
-    $allowMime = array("image/jpeg", "image/png");
-    if (!in_array($imgGalery['type'], $allowMime)) { //
-        $infoForm .= '<li>Image galerie de type incorrect (*.jpg, *.png)</li>';
-        $fileOk = false;
+$imgGalery = $_FILES['imgGalery'] ?? array();
+$imgGlobal = $_FILES['imgGlobal'] ?? array();
+$allowExtensions = array('jpg', 'jpeg', 'png'); // Extension autorisées
+// Je regarde si un fichier a été envoyé et je le valide
+if (!empty($imgGalery['name'])) {
+    //On vérifie l'extension avec le tableau suivant
+    if(!checkExtension($allowExtensions, $imgGalery['name'])){
+        $infoForm .= "<li>Image galerie de type incorrect (*.jpg, *.png)</li>";
+        $formOk = false;
     }
-    if (!in_array($imgGlobal['type'], $allowMime)) {
-        $infoForm .= '<li>Image global de type incorrect (*.jpg, *.png)</li>';
-        $fileOk = false;
+}// fin de vérication des fichiers
+if (!empty($imgGlobal['name'])) {
+    //On vérifie l'extension avec le tableau suivant
+    if(!checkExtension($allowExtensions, $imgGlobal['name'])){
+        $infoForm .= "<li>Image global de type incorrect (*.jpg, *.png)</li>";
+        $formOk = false;
     }
 }// fin de vérication des fichiers
 
-
-var_dump($saisieOk);
-var_dump($fileOk);
-
+// Si le formaulaire est ok
 if ($saisieOk && $fileOk){
-    echo "ok";
-    $infoForm .= "Projet ajouter";
+    if (!empty($_GET['id'])){
+        if (updateProject($_GET['id'], $nameProject, $description, $urlProject, $dateStart, $dateEnd)) {
+            $infoForm .= "Projet mis à jour";
+        } else {
+            $infoForm .= "<li>Probleme lors de la mise à jour du projet</li>";
+            $formOk = false;
+        }
+    }else {
+        // On définit un nom aléatoire
+        $newFileNameGalery = newFileName($imgGalery['name'], 'galery');
+        $newFileNameGlobal = newFileName($imgGlobal['name'], 'global');
+
+        // Chemin upload stocké dans la bdd
+        $urlImgGalery = '/img/galery/' . $newFileNameGalery;
+        $urlImgGlobal = '/img/global/' . $newFileNameGlobal;
+
+        // J'upload le fichier
+        $uploadGalery = move_uploaded_file($imgGalery['tmp_name'], __DIR__ . $urlImgGalery);
+        $uploadGlobal = move_uploaded_file($imgGlobal['tmp_name'], __DIR__ . $urlImgGlobal);
+
+        if ($uploadGlobal && $uploadGalery) {
+            if (addProject($nameProject, $description, $urlProject, $dateStart, $dateEnd, $urlImgGalery, $urlImgGlobal)) {
+                $infoForm .= "Projet ajouter";
+            } else {
+                $infoForm .= "<li>Probleme lors de l'ajout dans la base de donnée</li>";
+                $formOk = false;
+            }
+        } else {
+            $infoForm .= "<li>Probleme lors de l'envoi des fichier</li>";
+            $formOk = false;
+        }
+    }
 }
 
+// Title page
+$title = "Ajout d'un projet";
 // Fin fichier
 require_once '../view/back_header.php';
 require_once '../view/back_add.php';

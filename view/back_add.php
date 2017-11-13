@@ -1,7 +1,7 @@
 <main class="ui container">
     <!--Ajout d'un projet-->
     <section id="addProject">
-        <h2 class="column">Ajouter un Projet</h2>
+        <h2 class="ui center aligned header">Ajouter un projet</h2>
 
         <?php if (!empty($infoForm)): ?>
             <?php if ($saisieOk && $fileOk):?>
@@ -17,24 +17,24 @@
         <?php endif; ?>
 
         <!--Formulaire d'ajout-->
-        <form method="post" action="" class="ui form attached fluid segment">
+        <form method="post" action="" enctype="multipart/form-data" class="ui form attached fluid segment">
             <!--nameProject-->
             <div class="field">
                 <label for="nameProject">Nom du projet</label>
-                <input type="text" id="nameProject" name="nameProject" placeholder="Nom du projet" value="<?=$_POST['nameProject'] ?? ''?>">
+                <input type="text" id="nameProject" name="nameProject" placeholder="Nom du projet" value="<?= $nameProject ?? ''?>">
             </div>
             <!--urlProject-->
             <div class="field">
                 <label for="urlProject">URL du projet</label>
                 <div class="ui labeled input">
                     <div class="ui label">http:// </div>
-                    <input type="text" id="urlProject" name="urlProject" placeholder="URL du projet" value="<?=$_POST['urlProject'] ?? ''?>">
+                    <input type="text" id="urlProject" name="urlProject" placeholder="URL du projet" value="<?= $urlProject ?? ''?>">
                 </div>
             </div>
             <!--description-->
             <div class="field">
                 <label for="description">Description du projet</label>
-                <textarea name="description" id="description" placeholder="Description"><?=$_POST['description'] ?? ''?></textarea>
+                <textarea name="description" id="description" placeholder="Description"><?= $description ?? ''?></textarea>
             </div>
             <!--date du projet-->
             <div class="ui two column stackable grid">
@@ -42,12 +42,12 @@
                     <!--dateStart-->
                     <div class="column field">
                         <label for="dateStart">Début du projet</label>
-                        <input type="date" id="dateStart" name="dateStart" value="<?=$_POST['dateStart'] ?? ''?>">
+                        <input type="text" id="dateStart" name="dateStart" value="<?= $dateStart ?? ''?>">
                     </div>
                     <!--dateEnd-->
                     <div class="column field">
                         <label for="dateEnd">Fin du projet</label>
-                        <input type="date" id="dateEnd" name="dateEnd" value="<?=$_POST['dateEnd'] ?? ''?>">
+                        <input type="text" id="dateEnd" name="dateEnd" value="<?= $dateEnd ?? ''?>">
                     </div>
                 </div>
                 <!--Image-->

@@ -12,15 +12,21 @@
 
     <main>
         <div class="ui raised very padded text container segment" style="margin: 20px;">
-            <h1>Login</h1>
+            <h1 class="ui center aligned header">Login</h1>
             <form class="ui form" method="post" action="">
                 <div class="field">
-                    <label for="email">email</label>
-                    <input id="email" type="email" name="email" placeholder="email">
+                    <label for="email">Email</label>
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input id="email" type="email" name="email" placeholder="email">
+                    </div>
                 </div>
                 <div class="field">
                     <label for="password">Password</label>
-                    <input id="password" type="password" name="password" placeholder="password">
+                    <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        <input id="password" type="password" name="password" placeholder="password">
+                    </div>
                 </div>
                 <?php if (!empty($infoForm)): ?>
                     <div class="ui visible error message">
@@ -28,7 +34,7 @@
                         <p><?= $infoForm ?></p>
                     </div>
                 <?php endif; ?>
-                <button class="ui button" type="submit">Connection</button>
+                <button class="positive fluid ui button" type="submit">Connection</button>
             </form>
         </div>
     </main>

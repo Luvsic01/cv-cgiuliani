@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.css" />
     <link rel="stylesheet" href="css/styles_back.css">
-    <title>Document</title>
+    <title><?= $title ?></title>
 </head>
 <body>
 <div class="ui fixed inverted menu">
