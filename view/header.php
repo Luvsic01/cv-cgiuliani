@@ -9,6 +9,7 @@
     <title><?= $title ?></title>
 </head>
 <body>
+<a class="btn-menu">MENU</a>
 <nav>
     <ul>
         <li><a href="#">Accueil</a></li>
