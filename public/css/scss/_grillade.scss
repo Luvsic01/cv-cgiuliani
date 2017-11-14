@@ -4,8 +4,8 @@
 // Best practise : (max-width: ($BP - 1)) and (min-width: $BP)
 
 $tiny: 480px !default; // or 'em' if you prefer, of course
-$small: 576px !default;
-$medium: 768px !default;
+$small: 540px !default;
+$medium: 720px !default;
 $large: 992px !default;
 $extra-large: 1200px !default;
 
@@ -14,7 +14,7 @@ $extra-large: 1200px !default;
 /* ---------------------------------- */
 /* Doc : http://grillade.knacss.com */
 // gutter values for grid layouts. Unit can be: %, px, em, rem
-$grid-gutters: ( '': 1rem, '-l': 2rem, '-xl': 4rem );
+$grid-gutters: ( '': 1rem, '-l': 2rem, '-xl': 4rem , '-timeline': 8rem);
 // IEfixing, see
 // https://github.com/alsacreations/KNACSS/issues/133;
 $iefix: 0.01px;

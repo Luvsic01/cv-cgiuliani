@@ -44,6 +44,18 @@ if (!empty($_POST)){
         $formOk = false;
     }
 
+    // en POST sur reCaptcha
+    $curl = new Curl\Curl(); // création de l'objet
+    $curl->post('https://www.google.com/recaptcha/api/siteverify', array(
+        'secret' => '6LedsjgUAAAAABipcvblcVXsRrjttR10lA0BXkFa',
+        'response' => $_POST['g-recaptcha-response'],
+    ));
+    $googleResponse = json_decode($curl->response, true);
+    if ($googleResponse['success'] === false){
+        $infoForm .= "reCAPTCHA non validé<br>";
+        $formOk = false;
+    }
+
     // Si les données de contact sont correct envoie par mail
     if ($formOk){
         $returnEmail = sendEmailContact($email, $name, $subject, $msg, $msg);
@@ -55,13 +67,12 @@ if (!empty($_POST)){
     }
 }// Fin du traintement post du formulaire de contact
 
-$arrayMiniPortfolio = getProjects(3);
+$arrayMiniPortfolio = getProjects(6);
 
 // Title page
 $title = "CV Cyril Giuliani";
 // include view
 require_once "../view/header.php";
-require_once "../view/about.php";
 require_once "../view/skills.php";
 require_once "../view/parcours.php";
 require_once "../view/portfolio_mini.php";

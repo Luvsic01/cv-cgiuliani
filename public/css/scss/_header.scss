@@ -1,3 +1,4 @@
+/* Bouton du menu mobile*/
 a.btn-menu{
   position: fixed;
   top: 0;
@@ -8,29 +9,34 @@ a.btn-menu{
   border: 2px solid #fff;
   border-radius: 0.4rem;
   cursor: pointer;
+  z-index: 999;
   @media screen and (min-width: $break-desktop) {
     display: none;
   }
 }
+/* Menu en mobile*/
 nav{
   position: fixed;
   height: 100vh;
-  width: 100vw;
-  //transform: translateX(-100%);
+  width: 100%;
+  transform: translateX(-100%);
   transition-duration: 0.3s;
+  z-index: 1000;
   ul{
     display: inline-block;
     padding: 0;
     margin: 0;
     height: 100vh;
-    background-color: #333;
+    background-color: $color-gray-dark-2;
     li{
       display: block;
       margin: 2rem 0;
       a{
+        text-align: center;
+        display: block;
         color: #fff;
         text-decoration: none;
-        padding: 2rem 1rem 2rem 1.5rem;
+        padding: 1.5rem;
         font-size: 1.4rem;
         &::after{
           content: '';
@@ -42,44 +48,59 @@ nav{
           transition: width .5s ease, background-color .5s ease;
         }
         &:hover::after {
-          width: 90%;
+          width: 100%;
           background: #fff;
         }
       }
     }
   }
+  /* Menu en desktop */
   @media screen and (min-width: $break-desktop) {
+    position: sticky;
+    top: 0;
+    z-index: 999;
     transform: translateX(0);
     height: 4rem;
     ul{
-      width: 100vw;
+      width: 100%;
       height: 4rem;
       text-align: center;
       li{
         display: inline-block;
-        padding: 0 0rem;
-        margin-top: 1rem;
+        padding: 0;
+        margin: 0rem;
         height: 4rem;
         a{
           font-size: 1.1rem;
+          line-height: 2rem;
           padding: 1rem 0.5rem;
         }
       }
     }
   }
 }
+/* header */
 header{
-  padding: 8rem 1rem 4rem;
-  background-color: #677273;
+  padding: 8rem 0rem 0rem;
   text-align: center;
+  background-image: url("../img/background_header.jpg");
+  background-position: center;
+  background-size: cover;
   h1{
     margin: 6rem 0;
     color: #fff;
     font-size: 3rem;
     span{
-      background-color: #2196F3;
+      background-color: $color-primary;
       padding: 0.5rem;
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
+  }
+  #about{
+    padding: 1rem;
+    text-align: center;
+    background-color: #000;
+    color: $color-gray-light-2;
+    opacity: 0.7;
   }
 }
