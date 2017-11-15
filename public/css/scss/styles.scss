@@ -1,6 +1,15 @@
+/* Variables */
+@import "variables";
+
+/* Google Font exo */
 @import url('https://fonts.googleapis.com/css?family=Exo:400,400i,700,700i,900,900i');
 
-*{
-  box-sizing: border-box;
-  font-family: 'Exo', sans-serif;
-}
+/* Partial */
+@import "general";
+@import "grillade";
+@import "header";
+@import "skills";
+@import "parcours";
+@import "portfolio";
+@import "contact";
+@import "footer";

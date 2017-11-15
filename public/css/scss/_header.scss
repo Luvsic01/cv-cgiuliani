@@ -1,0 +1,107 @@
+/* Bouton du menu mobile*/
+a.btn-menu{
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  padding: 0.5rem;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  z-index: 999;
+  @media screen and (min-width: $break-desktop) {
+    display: none;
+  }
+}
+/* Menu en mobile*/
+nav{
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  transform: translateX(-100%);
+  transition-duration: 0.3s;
+  z-index: 1000;
+  ul{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-color: $color-gray-dark-2;
+    li{
+      display: block;
+      margin: 2rem 0;
+      a{
+        text-align: center;
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 1.5rem;
+        font-size: 1.4rem;
+        &::after{
+          content: '';
+          display: block;
+          margin: auto;
+          height: 1px;
+          width: 0;
+          background: transparent;
+          transition: width .5s ease, background-color .5s ease;
+        }
+        &:hover::after {
+          width: 100%;
+          background: #fff;
+        }
+      }
+    }
+  }
+  /* Menu en desktop */
+  @media screen and (min-width: $break-desktop) {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transform: translateX(0);
+    height: 4rem;
+    ul{
+      width: 100%;
+      height: 4rem;
+      text-align: center;
+      li{
+        display: inline-block;
+        padding: 0;
+        margin: 0rem;
+        height: 4rem;
+        a{
+          font-size: 1.1rem;
+          line-height: 2rem;
+          padding: 1rem 0.5rem;
+        }
+      }
+    }
+  }
+}
+/* header */
+header{
+  padding: 8rem 0rem 0rem;
+  text-align: center;
+  //filter: blur(10px);
+  /*background-image: url("../img/background_header.jpg");
+  background-position: center;
+  background-size: cover;*/
+  h1{
+    margin: 6rem 0;
+    color: #fff;
+    font-size: 3rem;
+    span{
+      background-color: $color-primary;
+      padding: 0.5rem;
+      font-size: 2rem;
+    }
+  }
+  #about{
+    padding: 1rem;
+    text-align: center;
+    background-color: #000;
+    color: $color-gray-light-2;
+    opacity: 0.7;
+  }
+}
