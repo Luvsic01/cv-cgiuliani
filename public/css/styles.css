@@ -4,8 +4,6 @@
 /* Color */
 /* Google Font exo */
 @import url("https://fonts.googleapis.com/css?family=Exo:400,400i,700,700i,900,900i");
-/* Font-Awesome */
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
 /* Partial */
 /* Général */
 * {
@@ -786,20 +784,6 @@ header {
   @media screen and (min-width: 720px) {
     #parcours .item {
       transition-duration: 0.6s; }
-      #parcours .item span.bullet {
-        display: none;
-        content: '';
-        position: absolute;
-        background-color: #eee;
-        border-radius: 50%;
-        border: 6px solid #2196F3;
-        width: 2.6rem;
-        height: 2.6rem;
-        top: 0;
-        text-align: center; }
-        #parcours .item span.bullet i.fa {
-          color: #08528d;
-          line-height: 2rem; }
     #parcours .item-hide:nth-child(odd) {
       transform: translateX(-200vh); }
     #parcours .item-hide:nth-child(even) {
@@ -820,6 +804,15 @@ header {
         right: 0;
         transform: translateX(100%); }
       #parcours .item:nth-child(odd) span.bullet {
+        display: none;
+        content: '';
+        position: absolute;
+        background-color: #333;
+        border-radius: 50%;
+        border: 6px solid #2196F3;
+        width: 2rem;
+        height: 2rem;
+        top: 0;
         right: -4rem;
         transform: translate(50%, -50%); }
     #parcours .item:nth-child(even) {
@@ -837,6 +830,15 @@ header {
         left: 0;
         transform: translateX(-100%); }
       #parcours .item:nth-child(even) span.bullet {
+        display: none;
+        content: '';
+        position: absolute;
+        background-color: #333;
+        border-radius: 50%;
+        border: 6px solid #2196F3;
+        width: 2rem;
+        height: 2rem;
+        top: 0;
         left: -4rem;
         transform: translate(-50%, -50%); } }
 

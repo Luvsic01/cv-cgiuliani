@@ -179,25 +179,6 @@ function getProjects($limit=false){
     return $arrayResult;
 }
 
-// Récupéré les objet timeline
-function getTimeLineItems($limit=false){
-    global $pdo;
-    $requestSqlTimeline = "
-        SELECT * 
-        FROM timeline
-        ORDER BY tim_id DESC 
-    ";
-    $pdoStatementtimeline = $pdo->prepare($requestSqlTimeline);
-
-
-    if ($pdoStatementtimeline->execute() === false){
-        print_r($pdoStatementtimeline->errorInfo());
-        exit();
-    }
-    $arrayResult = $pdoStatementtimeline->fetchAll(PDO::FETCH_ASSOC);
-    return $arrayResult;
-}
-
 // Récupéré un projet avec son id
 function getProjectById($id){
     global $pdo;
