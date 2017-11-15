@@ -1,6 +1,6 @@
 #contact{
   padding-bottom: 2rem;
-  background-color: $color-gray-dark-2;
+  background-color: $color-gray-dark-1;
   h2{
     color: #fff;
   }
@@ -13,20 +13,14 @@
   }
 
   form{
-    font-family: 'Open Sans Condensed', arial, sans;
-    width: 500px;
     padding: 30px;
     background: #FFFFFF;
     margin: 50px auto;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
-
   }
   form h2{
     background: #4D4D4D;
     text-transform: uppercase;
-    font-family: 'Open Sans Condensed', sans-serif;
     color: #797979;
     font-size: 18px;
     font-weight: 100;
@@ -34,20 +28,13 @@
     margin: -30px -30px 30px -30px;
   }
   form input[type="text"],
-  form input[type="date"],
-  form input[type="datetime"],
   form input[type="email"],
   form input[type="number"],
   form input[type="search"],
-  form input[type="time"],
-  form input[type="url"],
   form input[type="password"],
-  form textarea,
-  form select
+  form textarea
   {
     box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     outline: none;
     display: block;
     width: 100%;
@@ -65,15 +52,12 @@
   }
   form input[type="button"],
   form input[type="submit"]{
-    -moz-box-shadow: inset 0px 1px 0px 0px $color-primary;
-    -webkit-box-shadow: inset 0px 1px 0px 0px $color-primary;
-    box-shadow: inset 0px 1px 0px 0px $color-primary;
+    box-shadow: inset 0px -1px 0px 0px darken($color-primary, 15%);
     background-color: $color-primary;
     border: 1px solid $color-primary;
     display: inline-block;
     cursor: pointer;
     color: #FFFFFF;
-    font-family: 'Open Sans Condensed', sans-serif;
     font-size: 14px;
     padding: 8px 18px;
     text-decoration: none;
@@ -81,8 +65,7 @@
   }
   form input[type="button"]:hover,
   form input[type="submit"]:hover {
-    background:linear-gradient(to bottom, $color-primary 5%, $color-primary 100%);
-    background-color:$color-primary;
+    background-color: darken($color-primary, 5%);
   }
 }
 

@@ -14,15 +14,16 @@
 <a class="btn-menu">MENU</a>
 <nav>
     <ul>
-        <li><a href="#">Accueil</a></li>
+        <li><a href="#top">Accueil</a></li>
         <li><a href="#about">Présentation</a></li>
-        <li><a href="#parcours">Parcours</a></li>
         <li><a href="#skills">Compétences</a></li>
+        <li><a href="#parcours">Parcours</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
-<header>
+<header id="top" class="parallax-window" data-parallax="scroll" data-image-src="./img/background_header.jpg">
+    <!--<img src="./img/background_header.jpg" alt="">-->
     <h1>Cyril Giuliani<br><span>Développeur Full-Stack</span></h1>
     <div id="about">
         <div class="wrapper">

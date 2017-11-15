@@ -1,7 +1,14 @@
 footer{
-  height: 15rem;
-  background-color: $color-gray-dark-2;
+    background-color: $color-gray-dark-2;
   div.lien-footer{
-    background-color: $color-gray-dark-1;
+    height: 4rem;
+    line-height: 4rem;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    p{
+      margin: 0;
+      padding: 0;
+    }
   }
 }

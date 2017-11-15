@@ -2,7 +2,8 @@
     <div class="wrapper">
         <h2>Parcours</h2>
         <div id="timeline" class="grid-2-small-1 has-gutter-timeline">
-            <div class="item">
+            <div class="item item-hide">
+                <span class="bullet"></span>
                 <p class="date">septembre 2017 - décembre 2017</p>
                 <h3>Formation WebForce3</h3>
                 <p class="place">Esch-sur-Alzette</p>
@@ -15,7 +16,8 @@
                     Wordpress<br>
                 </p>
             </div>
-            <div class="item">
+            <div class="item item-hide">
+                <span class="bullet"></span>
                 <p class="date">septembre 2017 - décembre 2017</p>
                 <h3>Sous-Officer (cadre) / Administrateur système</h3>
                 <p class="place">Thionville</p>
@@ -30,7 +32,8 @@
                     Mission de protection du territoire en tant que chef de groupe<br>
                 </p>
             </div>
-            <div class="item">
+            <div class="item item-hide">
+                <span class="bullet"></span>
                 <p class="date">mai 2010 - juin 2010</p>
                 <h3>Technicien informatique stagiaire</h3>
                 <p class="place">Bry-Sur-Marne</p>
@@ -40,7 +43,8 @@
                     Surveillance : CPU, Mémoire, RAID, DNS, température, utilisateurs, NTP et Tâches<br>
                 </p>
             </div>
-            <div class="item">
+            <div class="item item-hide">
+                <span class="bullet"></span>
                 <p class="date">mai 2010 - juin 2010</p>
                 <h3>Technicien informatique stagiaire</h3>
                 <p class="place">Bry-Sur-Marne</p>
@@ -50,7 +54,8 @@
                     Surveillance : CPU, Mémoire, RAID, DNS, température, utilisateurs, NTP et Tâches<br>
                 </p>
             </div>
-            <div class="item">
+            <div class="item item-hide">
+                <span class="bullet"></span>
                 <p class="date">mai 2010 - juin 2010</p>
                 <h3>Technicien informatique stagiaire</h3>
                 <p class="place">Bry-Sur-Marne</p>
