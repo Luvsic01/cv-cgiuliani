@@ -1,0 +1,16 @@
+#portfolio{
+  background-color: $color-gray-light-2;
+  h2{
+    color: $color-gray-dark-2;
+  }
+  .project{
+    height: 15rem;
+    background-position: center;
+    background-size: cover;
+  }
+  .remodal{
+  }
+  .illustration{
+    height: 80%;
+  }
+}
