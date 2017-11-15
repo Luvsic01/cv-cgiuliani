@@ -33,7 +33,8 @@ $(function(){
             bullet = $(bullets[i]);
             if ( hauteur > ( currentItem.offset().top - ($(window).height()/1.2 ) )) {
                 currentItem.removeClass("item-hide");
-                bullet.css( "display", "block" );
+                bullet.delay( 800 ).fadeIn( 400 );
+                //bullet.css( "display", "block" );
             }
         }
     });
