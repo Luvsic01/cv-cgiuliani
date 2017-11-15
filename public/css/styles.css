@@ -613,6 +613,8 @@ a.btn-menu {
   right: 0;
   margin: 1rem;
   padding: 0.5rem;
+  background-color: rgba(34, 34, 34, 0.4);
+  opacity: 0.8;
   color: #fff;
   border: 2px solid #fff;
   border-radius: 0.4rem;
@@ -645,7 +647,7 @@ nav {
         display: block;
         color: #fff;
         text-decoration: none;
-        padding: 1.5rem;
+        padding: 0 1.5rem;
         font-size: 1.4rem; }
         nav ul li a::after {
           content: '';

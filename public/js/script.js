@@ -1,4 +1,4 @@
-$(function () {
+$(function(){
     var btnMenu = document.querySelector("a.btn-menu");
     var menu = document.querySelector("nav");
 
@@ -14,7 +14,7 @@ $(function () {
 
 
     //smoothScroll
-    $('[href^="#"]').on("click", function(e) {
+    $('nav [href^="#"]').on("click", function(e) {
         e.preventDefault();
         var leHref = $(this).attr("href");
         var decalage = $(leHref).offset().top - 50;
@@ -23,20 +23,29 @@ $(function () {
         }, 600);
     }); //fin smoothScroll
 
-    //STIKY MENU
+    //timeline arrivée
     $(document).on("scroll", function() { //j'écoute le scroll
         var hauteur = $(this).scrollTop();
-        console.log(hauteur);
         var myItems = $(".item");
         var bullets = $(".bullet");
         for (var i = 0; i < myItems.length; i++) {
             currentItem = $(myItems[i]);
             bullet = $(bullets[i]);
-            if ( hauteur > ( currentItem.offset().top - ($(window).height()/2 ) )) {
+            if ( hauteur > ( currentItem.offset().top - ($(window).height()/1.2 ) )) {
                 currentItem.removeClass("item-hide");
                 bullet.css( "display", "block" );
             }
         }
-    }); // FIN STIKY MENU
+    });
 
+    /*//transparent nav
+    $(document).on("scroll", function() { //j'écoute le scroll
+        var hauteur = $(this).scrollTop();
+        console.log(hauteur);
+        if (hauteur > 64) { //quand le décalage est supérieur a 50
+            $("nav ul").css("background-color", "#222"); // jajoute la class navBarStiky
+        } else {
+            $("nav ul").css("background-color", "transparent"); // jajoute la class navBarStiky
+        }
+    }); // FIN STIKY MENU*/
 });
