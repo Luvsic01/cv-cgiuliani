@@ -39,14 +39,6 @@ $(function(){
         }
     });
 
-    /*//transparent nav
-    $(document).on("scroll", function() { //j'écoute le scroll
-        var hauteur = $(this).scrollTop();
-        console.log(hauteur);
-        if (hauteur > 64) { //quand le décalage est supérieur a 50
-            $("nav ul").css("background-color", "#222"); // jajoute la class navBarStiky
-        } else {
-            $("nav ul").css("background-color", "transparent"); // jajoute la class navBarStiky
-        }
-    }); // FIN STIKY MENU*/
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load('header-background', 'js/particles.json');
 });

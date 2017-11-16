@@ -81,29 +81,42 @@ nav{
     }
   }
 }
+.parallax-mirror{
+  filter: grayscale(30%) blur(1px);
+}
 /* header */
-header{
-  padding: 8rem 0rem 0rem;
+header#top{
   text-align: center;
-  //filter: blur(10px);
-  /*background-image: url("../img/background_header.jpg");
-  background-position: center;
-  background-size: cover;*/
-  h1{
-    margin: 6rem 0;
-    color: #fff;
-    font-size: 3rem;
-    span{
-      background-color: $color-primary;
-      padding: 0.5rem;
-      font-size: 2rem;
+  position: relative;
+
+  #header-background{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+  }
+
+  #title{
+    padding: 8rem 0;
+    h1{
+      margin: 0;
+      color: #fff;
+      font-size: 3rem;
+      span{
+        background-color: $color-primary;
+        padding: 0.5rem;
+        font-size: 2rem;
+      }
     }
   }
+
   #about{
+    width: 100%;
+    bottom: 0;
     padding: 1rem;
     text-align: center;
     background-color: #000;
+    background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
     color: $color-gray-light-2;
-    opacity: 0.7;
+    opacity: 0.6;
   }
 }

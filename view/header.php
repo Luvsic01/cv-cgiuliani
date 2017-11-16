@@ -22,9 +22,13 @@
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
-<header id="top" class="parallax-window" data-parallax="scroll" data-image-src="./img/background_header.jpg">
-    <!--<img src="./img/background_header.jpg" alt="">-->
-    <h1>Cyril Giuliani<br><span>Développeur Full-Stack</span></h1>
+<header id="top" >
+    <div id="header-background" class="parallax-window" data-parallax="scroll" data-image-src="./img/background_header.jpg">
+
+    </div>
+    <div id="title">
+        <h1>Cyril Giuliani<br><span>Développeur Full-Stack</span></h1>
+    </div>
     <div id="about">
         <div class="wrapper">
             <h2>A propos</h2>
