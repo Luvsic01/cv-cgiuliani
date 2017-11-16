@@ -1,12 +1,36 @@
 #portfolio{
-  background-color: $color-gray-light-2;
+  background-color: rgba(#121212, 0.6);
   h2{
-    color: $color-gray-dark-2;
+    color: #eee;
   }
   .project{
     height: 15rem;
     background-position: center;
     background-size: cover;
+    position: relative;
+    transition-duration: 0.3s;
+    background-color: #eee;
+    &:hover{
+
+    }
+    &:after{
+      content: "+";
+      font-size: 15rem;
+      line-height: 15rem;
+      font-weight: bold;
+      text-align: center;
+      color: #fff;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      transition-duration: 0.3s;
+      background-color: $color-primary;
+      opacity: 0;
+    }
+    &:hover:after{
+      opacity: 0.5;
+    }
   }
   .remodal{
   }

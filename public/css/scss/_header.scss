@@ -29,7 +29,8 @@ nav{
     padding: 0;
     margin: 0;
     height: 100vh;
-    background-color: $color-gray-dark-2;
+    background-color: #000;
+    border-bottom: 1px solid rgba(#fff, 0.6);
     li{
       display: block;
       margin: 2rem 0;
@@ -81,10 +82,19 @@ nav{
     }
   }
 }
+
+/* header */
 .parallax-mirror{
   filter: grayscale(30%) blur(1px);
 }
-/* header */
+
+.particles-js-canvas-el{
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
 header#top{
   text-align: center;
   position: relative;
@@ -116,7 +126,7 @@ header#top{
     text-align: center;
     background-color: #000;
     background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
-    color: $color-gray-light-2;
     opacity: 0.6;
+    color: $color-gray-light-2;
   }
 }

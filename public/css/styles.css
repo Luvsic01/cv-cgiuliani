@@ -9,8 +9,7 @@
 /* Partial */
 /* Général */
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: 'Exo', sans-serif; }
 
 body, html {
@@ -37,34 +36,22 @@ h2 {
 @media (min-width: 540px) {
   [class*=" grid-"],
   [class^="grid-"] {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+    flex-direction: row;
+    flex-wrap: wrap; }
     [class*=" grid-"] > *,
     [class^="grid-"] > * {
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
+      box-sizing: border-box;
       min-width: 0;
       min-height: 0; } }
 @media (min-width: 540px) {
   .grid,
   .grid--reverse {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex; }
     .grid > *,
     .grid--reverse > * {
-      -webkit-box-flex: 1;
-          -ms-flex: 1 1 0%;
-              flex: 1 1 0%;
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
+      flex: 1 1 0%;
+      box-sizing: border-box;
       min-width: 0;
       min-height: 0; }
     .grid.has-gutter > * + *,
@@ -427,26 +414,17 @@ h2 {
   margin-right: auto !important; }
 
 .item-first {
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1; }
+  order: -1; }
 
 .item-last {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1; }
+  order: 1; }
 
 [class*="grid-"][class*="--reverse"] {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse; }
+  flex-direction: row-reverse; }
 
 @media (min-width: 540px) {
   .full {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+    flex: 0 0 auto;
     width: calc(100% / 1 - 0.01px); }
 
   .has-gutter > .full {
@@ -462,9 +440,7 @@ h2 {
     width: calc(100% / 1 - 8rem - 0.01px); }
 
   .one-half {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+    flex: 0 0 auto;
     width: calc(100% / 2 - 0.01px); }
 
   .has-gutter > .one-half {
@@ -480,9 +456,7 @@ h2 {
     width: calc(100% / 2 - 8rem - 0.01px); }
 
   .one-third {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+    flex: 0 0 auto;
     width: calc(100% / 3 - 0.01px); }
 
   .has-gutter > .one-third {
@@ -498,9 +472,7 @@ h2 {
     width: calc(100% / 3 - 8rem - 0.01px); }
 
   .one-quarter {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+    flex: 0 0 auto;
     width: calc(100% / 4 - 0.01px); }
 
   .has-gutter > .one-quarter {
@@ -516,9 +488,7 @@ h2 {
     width: calc(100% / 4 - 8rem - 0.01px); }
 
   .one-fifth {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+    flex: 0 0 auto;
     width: calc(100% / 5 - 0.01px); }
 
   .has-gutter > .one-fifth {
@@ -534,9 +504,7 @@ h2 {
     width: calc(100% / 5 - 8rem - 0.01px); }
 
   .one-sixth {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+    flex: 0 0 auto;
     width: calc(100% / 6 - 0.01px); }
 
   .has-gutter > .one-sixth {
@@ -552,9 +520,7 @@ h2 {
     width: calc(100% / 6 - 8rem - 0.01px); }
 
   .two-thirds {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+    flex: 0 0 auto;
     width: calc(100% / 3 * 2 - 0.01px); }
 
   .has-gutter > .two-thirds {
@@ -570,9 +536,7 @@ h2 {
     width: calc(100% / 3 * 2 - 8rem - 0.01px); }
 
   .three-quarters {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+    flex: 0 0 auto;
     width: calc(100% / 4 * 3 - 0.01px); }
 
   .has-gutter > .three-quarters {
@@ -588,9 +552,7 @@ h2 {
     width: calc(100% / 4 * 3 - 8rem - 0.01px); }
 
   .five-sixths {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+    flex: 0 0 auto;
     width: calc(100% / 6 * 5 - 0.01px); }
 
   .has-gutter > .five-sixths {
@@ -672,10 +634,8 @@ nav {
   position: fixed;
   height: 100vh;
   width: 100%;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transform: translateX(-100%);
+  transition-duration: 0.3s;
   z-index: 1000;
   /* Menu en desktop */ }
   nav ul {
@@ -683,7 +643,8 @@ nav {
     padding: 0;
     margin: 0;
     height: 100vh;
-    background-color: #222; }
+    background-color: #000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6); }
     nav ul li {
       display: block;
       margin: 2rem 0; }
@@ -701,19 +662,16 @@ nav {
           height: 1px;
           width: 0;
           background: transparent;
-          -webkit-transition: width .5s ease, background-color .5s ease;
           transition: width .5s ease, background-color .5s ease; }
         nav ul li a:hover::after {
           width: 100%;
           background: #fff; }
   @media screen and (min-width: 720px) {
     nav {
-      position: -webkit-sticky;
       position: sticky;
       top: 0;
       z-index: 999;
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
+      transform: translateX(0);
       height: 4rem; }
       nav ul {
         width: 100%;
@@ -729,11 +687,16 @@ nav {
             line-height: 2rem;
             padding: 1rem 0.5rem; } }
 
-.parallax-mirror {
-  -webkit-filter: grayscale(30%) blur(1px);
-          filter: grayscale(30%) blur(1px); }
-
 /* header */
+.parallax-mirror {
+  filter: grayscale(30%) blur(1px); }
+
+.particles-js-canvas-el {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1; }
+
 header#top {
   text-align: center;
   position: relative; }
@@ -758,8 +721,8 @@ header#top {
     text-align: center;
     background-color: #000;
     background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
-    color: #efefef;
-    opacity: 0.6; }
+    opacity: 0.6;
+    color: #efefef; }
 
 #skills {
   background-color: #edefed;
@@ -774,14 +737,12 @@ header#top {
     padding: 2.5rem 1rem 1rem;
     background-color: #fff;
     height: 14rem;
-    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
     #skills .cat-skill h3 {
       position: absolute;
       top: 0;
       left: 50%;
-      -webkit-transform: translate(-50%, -80%);
-              transform: translate(-50%, -80%);
+      transform: translate(-50%, -80%);
       color: #333;
       text-align: center;
       border: 1.3rem solid #edefed;
@@ -798,7 +759,7 @@ header#top {
       list-style: none; }
 
 #parcours {
-  background-color: #333333;
+  background-color: rgba(18, 18, 18, 0.6);
   overflow: hidden;
   padding-bottom: 2rem;
   /* Timeline destop et + */ }
@@ -843,8 +804,7 @@ header#top {
         font-weight: bold; }
   @media screen and (min-width: 720px) {
     #parcours .item {
-      -webkit-transition-duration: 0.6s;
-              transition-duration: 0.6s; }
+      transition-duration: 0.6s; }
       #parcours .item span.bullet {
         display: none;
         content: '';
@@ -860,11 +820,9 @@ header#top {
           color: #08528d;
           line-height: 2rem; }
     #parcours .item-hide:nth-child(odd) {
-      -webkit-transform: translateX(-200vh);
-              transform: translateX(-200vh); }
+      transform: translateX(-200vh); }
     #parcours .item-hide:nth-child(even) {
-      -webkit-transform: translateX(200vh);
-              transform: translateX(200vh); }
+      transform: translateX(200vh); }
     #parcours .item:nth-child(odd) {
       text-align: right;
       margin-top: 0;
@@ -879,12 +837,10 @@ header#top {
         border-left: 30px solid #fff;
         top: 0;
         right: 0;
-        -webkit-transform: translateX(100%);
-                transform: translateX(100%); }
+        transform: translateX(100%); }
       #parcours .item:nth-child(odd) span.bullet {
         right: -4rem;
-        -webkit-transform: translate(50%, -50%);
-                transform: translate(50%, -50%); }
+        transform: translate(50%, -50%); }
     #parcours .item:nth-child(even) {
       margin-top: 8rem;
       margin-bottom: 0; }
@@ -898,27 +854,44 @@ header#top {
         border-right: 30px solid #fff;
         top: 0;
         left: 0;
-        -webkit-transform: translateX(-100%);
-                transform: translateX(-100%); }
+        transform: translateX(-100%); }
       #parcours .item:nth-child(even) span.bullet {
         left: -4rem;
-        -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%); } }
+        transform: translate(-50%, -50%); } }
 
 #portfolio {
-  background-color: #efefef; }
+  background-color: rgba(18, 18, 18, 0.6); }
   #portfolio h2 {
-    color: #222; }
+    color: #eee; }
   #portfolio .project {
     height: 15rem;
     background-position: center;
-    background-size: cover; }
+    background-size: cover;
+    position: relative;
+    transition-duration: 0.3s;
+    background-color: #eee; }
+    #portfolio .project:after {
+      content: "+";
+      font-size: 15rem;
+      line-height: 15rem;
+      font-weight: bold;
+      text-align: center;
+      color: #fff;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      transition-duration: 0.3s;
+      background-color: #2196F3;
+      opacity: 0; }
+    #portfolio .project:hover:after {
+      opacity: 0.5; }
   #portfolio .illustration {
     height: 80%; }
 
 #contact {
   padding-bottom: 2rem;
-  background-color: #333; }
+  background-color: rgba(18, 18, 18, 0.6); }
   #contact h2 {
     color: #fff; }
   #contact form {
@@ -929,8 +902,7 @@ header#top {
     padding: 30px;
     background: #FFFFFF;
     margin: 50px auto;
-    -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22); }
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22); }
   #contact form h2 {
     background: #4D4D4D;
     text-transform: uppercase;
@@ -945,8 +917,7 @@ header#top {
   #contact form input[type="search"],
   #contact form input[type="password"],
   #contact form textarea {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     outline: none;
     display: block;
     width: 100%;
@@ -962,8 +933,7 @@ header#top {
     overflow: hidden; }
   #contact form input[type="button"],
   #contact form input[type="submit"] {
-    -webkit-box-shadow: inset 0px -1px 0px 0px #0a6ebd;
-            box-shadow: inset 0px -1px 0px 0px #0a6ebd;
+    box-shadow: inset 0px -1px 0px 0px #0a6ebd;
     background-color: #2196F3;
     border: 1px solid #2196F3;
     display: inline-block;
@@ -978,7 +948,7 @@ header#top {
     background-color: #0d8aee; }
 
 footer {
-  background-color: #222; }
+  background-color: #000; }
   footer div.lien-footer {
     height: 4rem;
     line-height: 4rem;
@@ -988,5 +958,228 @@ footer {
     footer div.lien-footer p {
       margin: 0;
       padding: 0; }
+
+/* ==========================================================================
+   Remodal's necessary styles
+   ========================================================================== */
+/* Hide scroll bar */
+html.remodal-is-locked {
+  overflow: hidden;
+  touch-action: none; }
+
+/* Anti FOUC */
+.remodal,
+[data-remodal-id] {
+  display: none; }
+
+/* Necessary styles of the overlay */
+.remodal-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: -5000px;
+  right: -5000px;
+  bottom: -5000px;
+  left: -5000px;
+  display: none; }
+
+/* Necessary styles of the wrapper */
+.remodal-wrapper {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow: auto;
+  text-align: center;
+  -webkit-overflow-scrolling: touch; }
+
+.remodal-wrapper:after {
+  display: inline-block;
+  height: 100%;
+  margin-left: -0.05em;
+  content: ""; }
+
+/* Fix iPad, iPhone glitches */
+.remodal-overlay,
+.remodal-wrapper {
+  backface-visibility: hidden; }
+
+/* Necessary styles of the modal dialog */
+.remodal {
+  position: relative;
+  outline: none;
+  text-size-adjust: 100%; }
+
+.remodal-is-initialized {
+  /* Disable Anti-FOUC */
+  display: inline-block; }
+
+/* ==========================================================================
+   Remodal's default mobile first theme
+   ========================================================================== */
+/* Default theme styles for the background */
+.remodal-bg.remodal-is-opening,
+.remodal-bg.remodal-is-opened {
+  filter: blur(3px); }
+
+/* Default theme styles of the overlay */
+.remodal-overlay {
+  background: rgba(43, 46, 56, 0.9); }
+
+.remodal-overlay.remodal-is-opening,
+.remodal-overlay.remodal-is-closing {
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards; }
+
+.remodal-overlay.remodal-is-opening {
+  animation-name: remodal-overlay-opening-keyframes; }
+
+.remodal-overlay.remodal-is-closing {
+  animation-name: remodal-overlay-closing-keyframes; }
+
+/* Default theme styles of the wrapper */
+.remodal-wrapper {
+  padding: 10px 10px 0; }
+
+/* Default theme styles of the modal dialog */
+.remodal {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 35px;
+  transform: translate3d(0, 0, 0);
+  color: #2b2e38;
+  background: #fff; }
+
+.remodal.remodal-is-opening,
+.remodal.remodal-is-closing {
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards; }
+
+.remodal.remodal-is-opening {
+  animation-name: remodal-opening-keyframes; }
+
+.remodal.remodal-is-closing {
+  animation-name: remodal-closing-keyframes; }
+
+/* Vertical align of the modal dialog */
+.remodal,
+.remodal-wrapper:after {
+  vertical-align: middle; }
+
+/* Close button */
+.remodal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  overflow: visible;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.2s;
+  text-decoration: none;
+  color: #95979c;
+  border: 0;
+  outline: 0;
+  background: transparent; }
+
+.remodal-close:hover,
+.remodal-close:focus {
+  color: #2b2e38; }
+
+.remodal-close:before {
+  font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif !important;
+  font-size: 50px;
+  line-height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 35px;
+  content: "\00d7";
+  text-align: center; }
+
+/* Dialog buttons */
+.remodal-confirm,
+.remodal-cancel {
+  font: inherit;
+  display: inline-block;
+  overflow: visible;
+  min-width: 110px;
+  margin: 0;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  border: 0;
+  outline: 0; }
+
+.remodal-confirm {
+  color: #fff;
+  background: #81c784; }
+
+.remodal-confirm:hover,
+.remodal-confirm:focus {
+  background: #66bb6a; }
+
+.remodal-cancel {
+  color: #fff;
+  background: #e57373; }
+
+.remodal-cancel:hover,
+.remodal-cancel:focus {
+  background: #ef5350; }
+
+/* Remove inner padding and border in Firefox 4+ for the button tag. */
+.remodal-confirm::-moz-focus-inner,
+.remodal-cancel::-moz-focus-inner,
+.remodal-close::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+/* Keyframes
+   ========================================================================== */
+@keyframes remodal-opening-keyframes {
+  from {
+    transform: scale(1.05);
+    opacity: 0; }
+  to {
+    transform: none;
+    opacity: 1;
+    filter: blur(0); } }
+@keyframes remodal-closing-keyframes {
+  from {
+    transform: scale(1);
+    opacity: 1; }
+  to {
+    transform: scale(0.95);
+    opacity: 0;
+    filter: blur(0); } }
+@keyframes remodal-overlay-opening-keyframes {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes remodal-overlay-closing-keyframes {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+/* Media queries
+   ========================================================================== */
+/* IE8
+   ========================================================================== */
+.lt-ie9 .remodal-overlay {
+  background: #2b2e38; }
+
+.lt-ie9 .remodal {
+  width: 700px; }
 
 /*# sourceMappingURL=styles.css.map */
