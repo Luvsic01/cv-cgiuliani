@@ -1,7 +1,7 @@
 <section id="contact">
     <div class="wrapper">
         <h2>Contact</h2>
-        <form method="post" action="index.php#contact">
+        <form> <!--method="post" action="index.php#contact"-->
             <div id="infoForm" class="<?php if ($returnEmail): ?>valide<?php else: ?>invalide<?php endif; ?>">
                 <p><?= $infoForm ?></p>
             </div>
@@ -22,7 +22,7 @@
                 <textarea id="msg" name="msg" placeholder="* Votre message" rows="10"><?= $msg ?? '' ?></textarea>
             </div>
             <div class="g-recaptcha" data-sitekey="6LedsjgUAAAAAARQNzGs-qY2wOfymN337gNGYEbs"></div>
-            <input  type="submit" value="Envoyer">
+            <input id="btnFormContact" type="submit" value="Envoyer">
         </form>
     </div>
 </section>
