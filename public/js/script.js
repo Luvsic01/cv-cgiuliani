@@ -64,22 +64,19 @@ $(function(){
         e.preventDefault();
 
         //todo recupérer les données en javascript
-        var nameContact = $( '#name' );
-        var emailContact = $( '#email' );
-        var subjectContact = $( '#subject' );
-        var msgContact = $( '#msg' );
-
-        //todo vérifier les donnée
+        var dataForm = $(this).serialize();
 
         //todo envoyer un appel ajax vers contact.php
-        var ajaxContactForm = $.ajax({
-            url: "contact.php",
+        $.ajax({
+            url: "ajax/contact.php",
             method: "post",
-            data:
+            data: dataForm,
+            datatype: 'json'
         })
             .done(function(data) {
                 console.log(data);
-                $('#ajaxText').html(data);
+                console.log(data['formOk']);
+                $('#infoForm').html(data['infoForm']);
             })
             .fail(function() {
                 alert( "bad news... ERROR !" );

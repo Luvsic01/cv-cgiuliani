@@ -2,8 +2,8 @@
     <div class="wrapper">
         <h2>Contact</h2>
         <form> <!--method="post" action="index.php#contact"-->
-            <div id="infoForm" class="<?php if ($returnEmail): ?>valide<?php else: ?>invalide<?php endif; ?>">
-                <p><?= $infoForm ?></p>
+            <div id="infoForm" class="">
+                <p></p>
             </div>
             <div>
                 <label for="name">Nom :</label>
