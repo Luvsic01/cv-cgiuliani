@@ -47,8 +47,9 @@
     height: 45px;
   }
   form textarea{
-    resize:none;
+    resize: vertical;
     overflow: hidden;
+    height: 6rem;
   }
   form input[type="button"],
   form input[type="submit"]{
@@ -69,3 +70,17 @@
   }
 }
 
+#infoForm{
+  color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: none;
+  transition-duration: 0.3s;
+}
+.valid{
+  background-color: #66bb6a;
+}
+
+.invalid{
+  background-color: #ef5350;
+}

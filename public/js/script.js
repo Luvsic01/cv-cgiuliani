@@ -58,34 +58,31 @@ $(function(){
 
     /**********************************************************************/
     /****** Formulaire contact submit en AJAX *****************************/
-    var myFormContact = $('#contact form');
-
-    function contactForm(e) {
+    $('#contact').find('form').on('submit', function(e) {
         e.preventDefault();
-
-        //todo recupérer les données en javascript
         var dataForm = $(this).serialize();
-
-        //todo envoyer un appel ajax vers contact.php
+        var infoForm = $('#infoForm');
         $.ajax({
             url: "ajax/contact.php",
             method: "post",
             data: dataForm,
-            datatype: 'json'
+            dataType: 'json'
         })
             .done(function(data) {
-                console.log(data);
-                console.log(data['formOk']);
-                $('#infoForm').html(data['infoForm']);
+                infoForm.html(data['infoForm']);
+                if(data['formOk'] && data['returnEmail']){
+                    infoForm.addClass('valid').removeClass('invalid');
+                }else {
+                    infoForm.addClass('invalid').removeClass('valid');
+                }
             })
             .fail(function() {
-                alert( "bad news... ERROR !" );
+                infoForm.html("Erreur de communication avec le serveur<br>Merci de réessayer plus tard").addClass('invalid').removeClass('valid');
             })
             .always(function() {
+                infoForm.css({'display' : 'block'});
             });
-    }
-
-    myFormContact.on('submit', contactForm);
+    });
     /****** Fin Formulaire contact submit en AJAX *************************/
     /**********************************************************************/
 });
